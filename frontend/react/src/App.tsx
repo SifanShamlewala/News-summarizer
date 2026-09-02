@@ -1,0 +1,51 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import BrowseArticles from "./components/BrowseArticles";
+import Layout from "./components/Layout";
+import AnalysisDashboard from "./components/AnalysisDashboard";
+import ArticleList from "./components/ArticlesList";
+import SearchPage from "./components/SearchPage";
+import StoryPage from "./components/StoryPage";
+import NotFoundPage from "./components/NotFoundPage";
+
+const routes = [
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: <NotFoundPage />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: "BrowseArticles/:id",
+        element: <BrowseArticles />,
+      },
+      {
+        path: "Articles",
+        element: <ArticleList />,
+      },
+      {
+        path: "Analyze",
+        element: <AnalysisDashboard />,
+      },
+      {
+        path: "Search",
+        element: <SearchPage />,
+      },
+      {
+        path: "Story/:id",
+        element: <StoryPage />,
+      },
+    ],
+  },
+];
+
+const router = createBrowserRouter(routes);
+
+function App() {
+  return <RouterProvider router={router} />;
+}
+
+export default App;
