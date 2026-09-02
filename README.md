@@ -57,6 +57,10 @@ This is a personal project built to experiment with **LangGraph agent architectu
 > - **Story Detail** — ![Full article list, AI-generated neutral brief, and deep analysis](Story_Detail.png)
 > - **Analyze** — ![Trigger deep bias analysis on any topic](Analysis.png)
 > - **Browse Articles** — ![Filter by outlet, bias, country, and date](Browse_Articles.png)
+---
+## 🖼️ Screenshots
+>
+> - **langraph graph** — ![graph](langgraph_bias_agent_flow.png)
 
 ---
 
